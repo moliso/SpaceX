@@ -1,0 +1,40 @@
+img {
+    width: 620px;
+    height: 380px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mat-card-header {
+    justify-content: center;
+}
+.title {
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.example-card {
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #aa6bfa;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.card-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.details {
+    max-width: 640px;
+    text-align: center;
+}

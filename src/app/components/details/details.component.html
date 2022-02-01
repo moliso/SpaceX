@@ -1,0 +1,23 @@
+<ng-container>
+    <div class="container">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title class="title">{{ details.name }}</mat-card-title>
+                <br />
+            </mat-card-header>
+            <br />
+            <img mat-card-image src={{details.links.patch.small}} alt="details photo">
+            <mat-card-content class="card-content">
+                <p class="details">
+                    {{ details.details }}
+                </p>
+                <br />
+                <a class="wiki-link" href={{details.links.webcast}}>Webcast</a>
+                <br />
+                <a class="wiki-link" href={{details.links.article}}>Article</a>
+                <br />
+                <a class="wiki-link" href={{details.links.wikipedia}}>Wikipedia</a>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</ng-container>

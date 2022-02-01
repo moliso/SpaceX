@@ -1,0 +1,9 @@
+<mat-toolbar class='navbar'>
+    <span><img src="/assets/images/SpaceX-Logo.png" alt="image"></span>
+    <div class="buttons">
+        <span mat-button [routerLink]="['/home']"> Home </span>
+        <span mat-button [routerLink]="['/roadster']"> Roadster Mission </span>
+        <span>Hello {{ username }}</span>
+        <span mat-button (click)="onLogout()" [routerLink]="['/login']">Logout</span>
+    </div>
+</mat-toolbar>
