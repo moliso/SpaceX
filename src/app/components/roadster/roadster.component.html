@@ -1,16 +1,18 @@
-<div class="container">
-    <mat-card class="example-card">
-        <mat-card-header>
-            <mat-card-title class="title">{{ roadsterData.name }}</mat-card-title>
+<ng-container *ngIf="roadsterData">
+    <div class="container">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title class="title">{{ roadsterData.name }}</mat-card-title>
+                <br />
+            </mat-card-header>
             <br />
-        </mat-card-header>
-        <br />
-        <img mat-card-image src={{roadsterData.flickr_images}} alt="Photo of Roadster">
-        <mat-card-content class="card-content">
-            <p class="details">
-                {{ roadsterData.details }}
-            </p>
-            <a class="wiki-link" href={{roadsterData.wikipedia}}>Wikipedia Article</a>
-        </mat-card-content>
-    </mat-card>
-</div>
+            <img mat-card-image src={{roadsterData.flickr_images}} alt="Photo of Roadster">
+            <mat-card-content class="card-content">
+                <p class="details">
+                    {{ roadsterData.details }}
+                </p>
+                <a class="wiki-link" href={{roadsterData.wikipedia}}>Wikipedia Article</a>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</ng-container>
