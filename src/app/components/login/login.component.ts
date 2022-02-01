@@ -12,9 +12,11 @@ import { AuthService } from "src/app/services/auth.service";
 
 export class LoginComponent implements OnInit {
 
+    submitted = false
+
     loginForm = this.formBuilder.group({
-        email: ['', Validators.required],
-        password: ['', Validators.required]
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]]
     })
 
     constructor(
@@ -25,9 +27,18 @@ export class LoginComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    get f() { return this.loginForm.controls; }
+
     onSubmit() {
+        this.submitted = true;
+
+        if (this.loginForm.invalid) {
+            return;
+        }
+
         this.authService.login(this.loginForm.value.email, this.loginForm.value.password);
         this.router.navigate(['']);
+
     }
 
     reloadComponent() {
